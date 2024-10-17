@@ -1,0 +1,397 @@
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Hero Section */
+.hero {
+  background-image: url('Eamil.hero6.jpg'); /* Add your background image */
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2em;
+  position: relative;
+}
+
+/* Orange Bottom Border */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px; /* Width of the border */
+  height: 4px; /* Height of the border */
+  background-color: orange; /* Border color */
+  margin: 10px auto 0; /* Centering the border */
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px; /* Increased padding */
+  margin-top: 40px; /* Added margin for top spacing */
+}
+
+/* Contact Information */
+.contact-info {
+  flex: 1 1 40%;
+  margin-right: 20px;
+  padding: 20px; /* Padding for content */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px; /* Added padding for each item */
+  background-color: #f9f9f9; /* Background for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+.contact-item:hover {
+  background-color: #eaeaea; /* Hover effect */
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: orange; /* Icon color */
+}
+
+.contact-link {
+  color: inherit; /* Inherit text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color: orange; /* Change color on hover */
+}
+
+
+/* Contact Form */
+.contact-form {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px; /* Padding for form */
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* Border for inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.submit-button {
+  padding: 10px; /* Uniform padding */
+  background-color: orange; /* Orange background */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient hover effect */
+}
+
+#alertBox {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* FAQ and Map Section */
+.faq-map-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.faq-section {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.faq-item {
+  margin-bottom: 20px; /* Increased gap between questions */
+}
+
+.faq-question {
+  cursor: pointer;
+  color: #333; /* Question color */
+  transition: color 0.3s;
+  padding: 10px; /* Padding for better touch target */
+  background-color: #eaeaea; /* Background for questions */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.faq-answer {
+  display: none; /* Hide answers initially */
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #fff; /* Background for answers */
+  border-left: 5px solid orange; /* Left border for style */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.faq-question:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+/* Map Section */
+.map-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Height of the map */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 40px; /* Padding for testimonials */
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow: auto; /* Enable horizontal scroll */
+  padding: 10px; /* Padding for testimonials */
+}
+
+.testimonial-item {
+  flex: 0 0 22%; /* Set each testimonial width */
+  padding: 20px; /* Padding for testimonial content */
+  margin-right: 10px; /* Margin between items */
+  background-color: white; /* White background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin: 20px 0; /* Space above and below buttons */
+}
+
+.call-button, .enquiry-button {
+  padding: 10px 15px;
+  background-color: orange; /* Button color */
+  color: white;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin: 20px 0; /* Space above and below buttons */
+}
+
+.call-button, .enquiry-button {
+  padding: 10px 20px; /* Increased padding for better click area */
+  background-color: orange; /* Button color */
+  color: white;
+  border: none;
+  text-decoration: none; /* Remove underline */
+  text-align: center;
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s, background-image 0.3s, transform 0.3s; /* Transition for background and scale */
+}
+
+.call-button:hover, .enquiry-button:hover {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Gradient hover effect */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc; /* Top border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .faq-map-section {
+      flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .faq-section, .map-section {
+      margin-right: 0; /* Remove margin for smaller screens */
+      margin-bottom: 20px; /* Space between sections */
+  }
+
+  .testimonial-item {
+      flex: 0 0 100%; /* Full width for testimonials on small screens */
+      margin-bottom: 20px; /* Space between testimonial items */
+  }
+}
+
+/* Increased bottom border for section titles */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2em;
+  position: relative;
+  border-bottom: 5px solid orange; /* Increased border thickness */
+}
+
+/* Contact Information */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px; /* Added padding for each item */
+  background-color: #f9f9f9; /* Background for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 1.5em; /* Increased icon size */
+}
+
+.testimonial-item img {
+  width: 80px; /* Image width */
+  height: 80px; /* Image height */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Section Title with Animated Bottom Border */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2em;
+  position: relative;
+  overflow: hidden; /* Ensure the animation stays within bounds */
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 0; /* Start with 0 width */
+  height: 5px; /* Border height */
+  background: orange; /* Border color */
+  transition: width 0.5s ease-in-out; /* Animation effect */
+  position: absolute;
+  bottom: 0; /* Positioning */
+  left: 0; /* Start from the left */
+}
+
+/* Add a class to trigger the animation when in view */
+.in-view .section-title::after {
+  width: 100%; /* Expand to full width on view */
+}
+
+/* Contact Information */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px; /* Added padding for each item */
+  background-color: #f9f9f9; /* Background for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  font-size: 1.5em; /* Increased icon size */
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%; /* Reduced width */
+  padding: 10px; /* Padding for button */
+  background-color: orange; /* Background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: darkorange; /* Darker shade on hover */
+}
+
+/* Testimonials Section */
+.testimonial-carousel {
+  display: flex; /* Flexbox layout */
+  overflow: hidden; /* Hide horizontal scrollbar */
+}
+
+.testimonial-item {
+  flex: 0 0 22%; /* Set each testimonial width */
+  padding: 20px; /* Padding for testimonial content */
+  margin-right: 15px; /* Gap between items */
+  background-color: white; /* White background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  text-align: center; /* Center the text */
+  transition: transform 0.3s; /* Smooth transform */
+}
+
+.testimonial-item:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.testimonial-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
